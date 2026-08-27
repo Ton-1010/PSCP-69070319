@@ -1,16 +1,9 @@
 """A-E-I-O-U"""
-z = ["a", "e", "i", "o", "u"]
-x = input().lower()
-
-for i in (x):
-    if i == z[0]:
-        z[0] += 1
-    elif i == z[1]:
-        z[1] += 1
-    elif i == z[1]:
-        z[2] += 1
-    elif i == z[1]:
-        z[3] += 1
-    elif i == z[1]:
-        z[4] += 1
-print(z)
+a = input().lower()
+vowels = ["a", "e", "i", "o", "u"]
+counts = [0, 0, 0, 0, 0]
+for i in range(5):
+    counts[i] = a.count(vowels[i])
+for i in range(5):
+    if counts[i] > 0:
+        print(f"{vowels[i]} : {counts[i]}")
